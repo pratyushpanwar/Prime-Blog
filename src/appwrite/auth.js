@@ -46,14 +46,13 @@ export class AuthService {
     }
   }
 
-  async getCurrUser() {
+  async getCurrentUser() {
     try {
-        const currUser = await this.account.get()
-        if(currUser) {
-            return currUser;
-        }
+        return currUser = await this.account.get()
+        
     } catch (error) {
         console.log("error :: authService :: getCurrUser ", error);
+        return null
     }
   }
 
